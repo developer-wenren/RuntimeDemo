@@ -31,9 +31,57 @@
     [self.view addSubview:button];
     
     button.center = (CGPoint){160,300};
-
+    
+    [self addViewClassNow];
+    
+    
     
 }
+
+void reportIMP(id self,SEL _cmd)
+{
+ 
+    NSLog(@"this object is %p",self);
+    
+    NSLog(@"class is %@,and super is %@",[self class],[self superclass]);
+    Class currentClass = [self class];
+    
+//    for (int i = 1; i<10; i++)
+//    {
+        NSLog(@"following the isa pointer %@ times give %p",currentClass,currentClass);
+    
+    NSLog(@"nsobject metaclass %p",objc_getMetaClass("WRCJView"));
+
+    
+    NSLog(@"following the isa pointer %@ times give %p",[currentClass superclass],[currentClass superclass]);
+    
+    NSLog(@"following the isa pointer %@ times give %p",[[currentClass superclass]superclass],[[currentClass superclass]superclass]);
+    
+    NSLog(@"following the isa pointer %@ times give %p",[[[currentClass superclass]superclass]superclass],[[[currentClass superclass]superclass]superclass]);
+    
+    
+    NSLog(@"nsobject metaclass %p",objc_getMetaClass("NSObject"));
+    
+}
+
+-(void)addViewClassNow
+{
+    //创建自己的类,继承uiview
+    Class myClass = objc_allocateClassPair([UIView class], "WRCJView", 0    );
+
+    class_addMethod(myClass, @selector(report), (IMP)reportIMP, "cj");
+    
+    // 注册这个类
+    objc_registerClassPair(myClass);
+    
+    id wrcj = [[myClass alloc]init];
+    
+    [wrcj performSelector:@selector(report)];
+    
+    
+    
+}
+
 
 
 -(void)viewDidAppear:(BOOL)animated

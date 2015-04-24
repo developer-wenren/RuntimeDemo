@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512939781AEA68BE00F9D2A3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 512939771AEA68BE00F9D2A3 /* Person.m */; };
+		5129397B1AEA695300F9D2A3 /* Person+WR.m in Sources */ = {isa = PBXBuildFile; fileRef = 5129397A1AEA695300F9D2A3 /* Person+WR.m */; };
 		514633471AE8E0E5006C90C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 514633461AE8E0E5006C90C0 /* main.m */; };
 		5146334A1AE8E0E5006C90C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 514633491AE8E0E5006C90C0 /* AppDelegate.m */; };
 		5146334D1AE8E0E5006C90C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5146334C1AE8E0E5006C90C0 /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		512939761AEA68BE00F9D2A3 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		512939771AEA68BE00F9D2A3 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		512939791AEA695300F9D2A3 /* Person+WR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+WR.h"; sourceTree = "<group>"; };
+		5129397A1AEA695300F9D2A3 /* Person+WR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+WR.m"; sourceTree = "<group>"; };
 		514633411AE8E0E5006C90C0 /* RuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514633451AE8E0E5006C90C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514633461AE8E0E5006C90C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 			children = (
 				514633451AE8E0E5006C90C0 /* Info.plist */,
 				514633461AE8E0E5006C90C0 /* main.m */,
+				512939761AEA68BE00F9D2A3 /* Person.h */,
+				512939771AEA68BE00F9D2A3 /* Person.m */,
+				512939791AEA695300F9D2A3 /* Person+WR.h */,
+				5129397A1AEA695300F9D2A3 /* Person+WR.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,11 +251,13 @@
 			files = (
 				5146336F1AE8EBCA006C90C0 /* Logging.m in Sources */,
 				51D09D151AE923540086190B /* ReplaceMethodHolder.m in Sources */,
+				512939781AEA68BE00F9D2A3 /* Person.m in Sources */,
 				5146336C1AE8EABF006C90C0 /* UIViewController+Logging.m in Sources */,
 				5146334D1AE8E0E5006C90C0 /* ViewController.m in Sources */,
 				5146334A1AE8E0E5006C90C0 /* AppDelegate.m in Sources */,
 				514633471AE8E0E5006C90C0 /* main.m in Sources */,
 				514633721AE900A2006C90C0 /* Aspects.m in Sources */,
+				5129397B1AEA695300F9D2A3 /* Person+WR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
